@@ -16,4 +16,4 @@ find_library(WPI_LIB wiringPi HINTS ${WPI_PATH} NO_CMAKE_FIND_ROOT_PATH)
 FILE(GLOB SRC_FILES src/*.c)
 add_executable(webserver ${SRC_FILES})
 # Link the pre-compiled wiringPi library to the executable we just declared 
-target_link_libraries(webserver ${WPI_LIB})
+target_link_libraries(webserver ${WPI_LIB} pthread)
